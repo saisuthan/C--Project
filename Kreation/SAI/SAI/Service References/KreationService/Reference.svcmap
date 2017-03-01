@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87877834-d7e9-4388-9b57-b0f8ba383258" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="bfbb9145-b024-4002-bbb4-0bfd6462557e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="93db9c18-a7af-44e3-9fe8-0ab134d85dc5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" />
+    <MetadataFile FileName="service31.xsd" MetadataType="Schema" ID="e3ed63c1-cb6d-48bd-b598-9833430671ef" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" />
+    <MetadataFile FileName="KreationService1.xsd" MetadataType="Schema" ID="2a294427-9fe3-4b12-8d73-1a3ce6cb4d1f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" />
+    <MetadataFile FileName="service32.xsd" MetadataType="Schema" ID="aa3b1416-f4ba-4a8d-9190-3ca15ee208b4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

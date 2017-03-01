@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CEB2C04-0A28-418C-A7C1-9F0AB3B9016A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAI</RootNamespace>
+    <AssemblyName>SAI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PQScan.BarcodeScanner">
+      <HintPath>..\..\pqScan.BarcodeScanner.Eval\Lib\PQScan.BarcodeScanner.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Branch\Borrella\Access.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\Access.Designer.cs">
+      <DependentUpon>Access.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BAccEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BAccEdit.Designer.cs">
+      <DependentUpon>BAccEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BAccountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BAccountant.Designer.cs">
+      <DependentUpon>BAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BGuest.Designer.cs">
+      <DependentUpon>BGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BPOS.Designer.cs">
+      <DependentUpon>BPOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BUpAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BUpAcc.Designer.cs">
+      <DependentUpon>BUpAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Bamba\BViewAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Bamba\BViewAcc.Designer.cs">
+      <DependentUpon>BViewAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\AccEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\AccEdit.Designer.cs">
+      <DependentUpon>AccEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\Accountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\Accountant.Designer.cs">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\Guest.Designer.cs">
+      <DependentUpon>Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\SelBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\SelBranch.Designer.cs">
+      <DependentUpon>SelBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\UpAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\UpAcc.Designer.cs">
+      <DependentUpon>UpAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\ViewAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\ViewAcc.Designer.cs">
+      <DependentUpon>ViewAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WAccEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WAccEdit.Designer.cs">
+      <DependentUpon>WAccEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WAccountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WAccountant.Designer.cs">
+      <DependentUpon>WAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WGuest.Designer.cs">
+      <DependentUpon>WGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WPOS.Designer.cs">
+      <DependentUpon>WPOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WUpAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WUpAcc.Designer.cs">
+      <DependentUpon>WUpAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Wattala\WViewAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Wattala\WViewAcc.Designer.cs">
+      <DependentUpon>WViewAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Borrella\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Borrella\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FillProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KreationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KreationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreationDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KreationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreationDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KreationDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreationDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\KreationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Branch\Borrella\Access.resx">
+      <DependentUpon>Access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BAccEdit.resx">
+      <DependentUpon>BAccEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BAccountant.resx">
+      <DependentUpon>BAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BGuest.resx">
+      <DependentUpon>BGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BPOS.resx">
+      <DependentUpon>BPOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BUpAcc.resx">
+      <DependentUpon>BUpAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Bamba\BViewAcc.resx">
+      <DependentUpon>BViewAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\AccEdit.resx">
+      <DependentUpon>AccEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\Accountant.resx">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\Guest.resx">
+      <DependentUpon>Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\SelBranch.resx">
+      <DependentUpon>SelBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\UpAcc.resx">
+      <DependentUpon>UpAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\ViewAcc.resx">
+      <DependentUpon>ViewAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WAccEdit.resx">
+      <DependentUpon>WAccEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WAccountant.resx">
+      <DependentUpon>WAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WGuest.resx">
+      <DependentUpon>WGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WPOS.resx">
+      <DependentUpon>WPOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WUpAcc.resx">
+      <DependentUpon>WUpAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Wattala\WViewAcc.resx">
+      <DependentUpon>WViewAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Borrella\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="FillProducts.xsc">
+      <DependentUpon>FillProducts.xsd</DependentUpon>
+    </None>
+    <None Include="FillProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FillProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FillProducts.xss">
+      <DependentUpon>FillProducts.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet.xsc">
+      <DependentUpon>KreationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KreationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KreationDataSet.xss">
+      <DependentUpon>KreationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet1.xsc">
+      <DependentUpon>KreationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KreationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KreationDataSet1.xss">
+      <DependentUpon>KreationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet2.xsc">
+      <DependentUpon>KreationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KreationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KreationDataSet2.xss">
+      <DependentUpon>KreationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet3.xsc">
+      <DependentUpon>KreationDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KreationDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KreationDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KreationDataSet3.xss">
+      <DependentUpon>KreationDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\KreationService\KreationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KreationService\SAI.KreationService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KreationService\service1.wsdl" />
+    <None Include="Service References\KreationService\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KreationService\service31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KreationService\service32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Branch\Borrella\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sett H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\KreationService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KreationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KreationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KreationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

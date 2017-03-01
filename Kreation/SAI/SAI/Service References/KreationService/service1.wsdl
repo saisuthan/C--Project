@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KreationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/KreationService" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKreationService_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_add_Ac_InputMessage">
+    <wsdl:part name="parameters" element="tns:add_Ac" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_add_Ac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:add_AcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Deleteusername_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deleteusername" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Deleteusername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteusernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Searchusername_InputMessage">
+    <wsdl:part name="parameters" element="tns:Searchusername" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Searchusername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchusernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_up_Acc_InputMessage">
+    <wsdl:part name="parameters" element="tns:up_Acc" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_up_Acc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:up_AccResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ed_acc_InputMessage">
+    <wsdl:part name="parameters" element="tns:ed_acc" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ed_acc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ed_accResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_accDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:accDetail" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_accDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:accDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_add_prod_InputMessage">
+    <wsdl:part name="parameters" element="tns:add_prod" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_add_prod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:add_prodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ProDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProDetail" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ProDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ed_prod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ed_prod" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_ed_prod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ed_prodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchBorella_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchBorella" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchBorella_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchBorellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchBamba_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchBamba" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchBamba_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchBambaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchWattala_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchWattala" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchGuest_BranchWattala_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGuest_BranchWattalaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUser" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_GetPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrice" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_GetPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Name_InputMessage">
+    <wsdl:part name="parameters" element="tns:Name" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Name_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_InsertPos_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPos" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_InsertPos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_SearchAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_FillProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillProducts" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_FillProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Get_Sum_of_Charges_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Sum_of_Charges" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_Get_Sum_of_Charges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Sum_of_ChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_delete_pos_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_pos" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_delete_pos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_posResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_productlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:productlist" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_productlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:productlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_delete_item_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_item" />
+  </wsdl:message>
+  <wsdl:message name="IKreationService_delete_item_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_itemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IKreationService">
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/login" message="tns:IKreationService_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/loginResponse" message="tns:IKreationService_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="add_Ac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/add_Ac" message="tns:IKreationService_add_Ac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/add_AcResponse" message="tns:IKreationService_add_Ac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deleteusername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/Deleteusername" message="tns:IKreationService_Deleteusername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/DeleteusernameResponse" message="tns:IKreationService_Deleteusername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Searchusername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/Searchusername" message="tns:IKreationService_Searchusername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchusernameResponse" message="tns:IKreationService_Searchusername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="up_Acc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/up_Acc" message="tns:IKreationService_up_Acc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/up_AccResponse" message="tns:IKreationService_up_Acc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ed_acc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/ed_acc" message="tns:IKreationService_ed_acc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/ed_accResponse" message="tns:IKreationService_ed_acc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="accDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/accDetail" message="tns:IKreationService_accDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/accDetailResponse" message="tns:IKreationService_accDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="add_prod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/add_prod" message="tns:IKreationService_add_prod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/add_prodResponse" message="tns:IKreationService_add_prod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/ProDetail" message="tns:IKreationService_ProDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/ProDetailResponse" message="tns:IKreationService_ProDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ed_prod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/ed_prod" message="tns:IKreationService_ed_prod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/ed_prodResponse" message="tns:IKreationService_ed_prod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchBorella">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchBorella" message="tns:IKreationService_SearchGuest_BranchBorella_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchBorellaResponse" message="tns:IKreationService_SearchGuest_BranchBorella_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchBamba">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchBamba" message="tns:IKreationService_SearchGuest_BranchBamba_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchBambaResponse" message="tns:IKreationService_SearchGuest_BranchBamba_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchWattala">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchWattala" message="tns:IKreationService_SearchGuest_BranchWattala_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchGuest_BranchWattalaResponse" message="tns:IKreationService_SearchGuest_BranchWattala_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/SearchUser" message="tns:IKreationService_SearchUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchUserResponse" message="tns:IKreationService_SearchUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/GetPrice" message="tns:IKreationService_GetPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/GetPriceResponse" message="tns:IKreationService_GetPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Name">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/Name" message="tns:IKreationService_Name_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/NameResponse" message="tns:IKreationService_Name_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/InsertPos" message="tns:IKreationService_InsertPos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/InsertPosResponse" message="tns:IKreationService_InsertPos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/SearchAllProducts" message="tns:IKreationService_SearchAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/SearchAllProductsResponse" message="tns:IKreationService_SearchAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/FillProducts" message="tns:IKreationService_FillProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/FillProductsResponse" message="tns:IKreationService_FillProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sum_of_Charges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/Get_Sum_of_Charges" message="tns:IKreationService_Get_Sum_of_Charges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/Get_Sum_of_ChargesResponse" message="tns:IKreationService_Get_Sum_of_Charges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_pos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/delete_pos" message="tns:IKreationService_delete_pos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/delete_posResponse" message="tns:IKreationService_delete_pos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="productlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/productlist" message="tns:IKreationService_productlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/productlistResponse" message="tns:IKreationService_productlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_item">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKreationService/delete_item" message="tns:IKreationService_delete_item_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKreationService/delete_itemResponse" message="tns:IKreationService_delete_item_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IKreationService" type="tns:IKreationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_Ac">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/add_Ac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deleteusername">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/Deleteusername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searchusername">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/Searchusername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="up_Acc">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/up_Acc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ed_acc">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/ed_acc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accDetail">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/accDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_prod">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/add_prod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProDetail">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/ProDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ed_prod">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/ed_prod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchBorella">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/SearchGuest_BranchBorella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchBamba">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/SearchGuest_BranchBamba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGuest_BranchWattala">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/SearchGuest_BranchWattala" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/SearchUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/GetPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Name">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPos">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/InsertPos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/SearchAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillProducts">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/FillProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sum_of_Charges">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/Get_Sum_of_Charges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_pos">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/delete_pos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="productlist">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/productlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_item">
+      <soap:operation soapAction="http://tempuri.org/IKreationService/delete_item" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KreationService">
+    <wsdl:port name="BasicHttpBinding_IKreationService" binding="tns:BasicHttpBinding_IKreationService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/KreationService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
